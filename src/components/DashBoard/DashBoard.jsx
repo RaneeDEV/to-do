@@ -57,6 +57,7 @@ function Tasks() {
         <h2 className="tasks__title">Title</h2>
         <p className="tasks__desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+          ratione! ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
           ratione!
         </p>
         <div className="tasks__tags-wrap">

@@ -12,7 +12,7 @@ export default function Header() {
               </a>
               <p className="logo__desc">• Web App by Ranee</p>
             </div>
-            <button className="btn__add-task">
+            <button className="btn__add-task" title="Add Task">
               <i className="fas fa-plus"></i>
             </button>
           </nav>

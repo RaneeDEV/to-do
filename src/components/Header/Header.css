@@ -31,17 +31,22 @@
 
 .btn__add-task {
   cursor: pointer;
-  padding: 7px 20px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 17px;
-  background-color: #5a1eff;
+  background: #ccc;
   color: #fff;
-  border: 3px solid transparent;
-  border-radius: 3px;
-  transition: 0.25s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: .4s ease-in-out;
 }
 
 .btn__add-task:hover {
-  background-color: transparent;
+  background: transparent;
   color: #5a1eff;
-  border-color: #5a1eff;
+  transform: rotate(360deg);
 }
