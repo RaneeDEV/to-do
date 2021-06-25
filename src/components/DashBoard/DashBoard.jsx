@@ -11,9 +11,20 @@ export default function DashBoard() {
               <i className="fas fa-ellipsis-h"></i>
             </button>
           </div>
-          <Tasks />
-          <Tasks />
-          <Tasks />
+          <div className="dashboard__tasks">
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+            <Tasks />
+          </div>
         </div>
         <div className="dashboard__box">
           <div className="dashboard__box-header">
@@ -44,11 +55,12 @@ function Tasks() {
     <>
       <a href="#" className="tasks__box">
         <h2 className="tasks__title">Title</h2>
-        <p className="tasks__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ratione!</p>
+        <p className="tasks__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+          ratione!
+        </p>
         <div className="tasks__tags-wrap">
-          <a href="#" className="tasks__tags">
-            # Tag
-          </a>
+          <p className="tasks__tags"># Tag</p>
         </div>
       </a>
     </>

@@ -1,6 +1,6 @@
 /* ==================================== DASHBOARD START ====================================  */
 .dashboard__wrap {
-  padding-top: 100px;
+  padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -11,17 +11,21 @@
   background-color: #eeeeee;
   border-radius: 5px;
   margin-right: 1rem;
-  padding: 10px;
+  padding: 0 10px;
+  box-shadow: 0 7px 12px 0 hsla(0, 0%, 20%, 0.3);
 }
 
 .dashboard__box-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
+  position: sticky;
+  padding: 12px;
+  background-color: #eeeeee;
 }
 
 .dashboard__title {
-  padding: 12px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -43,17 +47,33 @@
 .dashboard__settigs-btn:hover {
   background: hsla(0, 0%, 20%, 0.1);
 }
+
+.dashboard__tasks{
+   height: 55vh;
+   overflow-y: auto;
+   padding-right: 8px;
+}
+
+.dashboard__tasks::-webkit-scrollbar {
+   width: 7px;
+}
+
+.dashboard__tasks::-webkit-scrollbar-thumb {
+   background-color: #ccc;
+   border-radius: 999px;
+}
+
 /* ==================================== DASHBOARD END ====================================  */
 
 /* ==================================== TASK START ====================================  */
 .tasks__box {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin-top: 0.7rem;
+  padding: 15px;
+  margin-bottom: 0.7rem;
   border-radius: 3px;
   background: hsl(0, 0%, 100%);
-  box-shadow: 0 2px 0 0 hsla(0, 0%, 20%, 0.3);
+  box-shadow: 0 2px 0 0 hsla(0, 0%, 20%, 0.2);
 }
 
 .tasks__title {
@@ -77,7 +97,7 @@
 
 .tasks__tags {
   width: 90px;
-  background-color: hsl(256, 76%, 64%);
+  background: linear-gradient(210deg, hsl(210, 76%, 64%) 0%, hsl(230, 76%, 64%) 100%);
   padding: 5px 7px;
   margin: 2px;
   border-radius: 999px;
@@ -88,9 +108,5 @@
   font-size: 12px;
   color: #fff;
   transition: 0.15s;
-}
-
-.tasks__tags:hover {
-  background-color: hsl(256, 100%, 65%);
 }
 /* ==================================== TASK END ====================================  */
