@@ -5,16 +5,13 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 .dashboard__box {
   width: calc((100% / 3) - 2rem);
   background-color: #eeeeee;
-  border-radius: 5px;
   margin-right: 1rem;
-  padding: 0 10px;
-  box-shadow: 0 7px 12px 0 hsla(0, 0%, 20%, 0.3);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 5px 1px 0 hsla(0, 0%, 50%, 0.2);
 }
-
 .dashboard__box-header {
   display: flex;
   align-items: center;
@@ -22,14 +19,24 @@
   top: 0;
   position: sticky;
   padding: 12px;
-  background-color: #eeeeee;
+  border-radius: 5px 5px 0 0;
 }
-
+.dashboard__box-header.todo {
+  background-color: hsl(30, 90%, 60%);
+}
+.dashboard__box-header.inprocess {
+  background-color: hsl(45, 90%, 60%);
+}
+.dashboard__box-header.done {
+  background-color: hsl(90, 50%, 60%);
+}
 .dashboard__title {
-  font-weight: 600;
+  color: #fff;
   text-transform: uppercase;
 }
-
+.dashboard__title>i{
+  margin-right: 10px;
+}
 .dashboard__settigs-btn {
   cursor: pointer;
   background: transparent;
@@ -40,33 +47,32 @@
   height: 35px;
   border: 1px solid transparent;
   border-radius: 50%;
-  color: #666666;
+  color: #fff;
   transition: 0.25s;
 }
 
 .dashboard__settigs-btn:hover {
-  background: hsla(0, 0%, 20%, 0.1);
+  background: hsla(0, 0%, 100%, 0.25);
 }
-
-.dashboard__tasks{
-   height: 55vh;
-   overflow-y: auto;
-   padding-right: 8px;
+.dashboard__todo {
+  height: 55vh;
+  overflow-y: auto;
+  padding-right: 8px;
 }
-
-.dashboard__tasks::-webkit-scrollbar {
-   width: 7px;
+.dashboard__todo::-webkit-scrollbar {
+  width: 7px;
 }
-
-.dashboard__tasks::-webkit-scrollbar-thumb {
-   background-color: #ccc;
-   border-radius: 999px;
+.dashboard__todo::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 999px;
 }
-
+.dashboard__todos {
+  padding: 12px;
+}
 /* ==================================== DASHBOARD END ====================================  */
 
 /* ==================================== TASK START ====================================  */
-.tasks__box {
+.todo__box {
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -75,35 +81,35 @@
   background: hsl(0, 0%, 100%);
   box-shadow: 0 2px 0 0 hsla(0, 0%, 20%, 0.2);
 }
-
-.tasks__title {
+.todo__title {
   font-size: 17px;
   font-weight: 600;
 }
-
-.tasks__desc {
+.todo__desc {
   font-size: 13px;
   font-style: italic;
   margin: 15px 0;
   color: #5f5f5f;
   line-height: 1.2;
   letter-spacing: 0.2px;
-  overflow : hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
-.tasks__tags-wrap {
+.todo__tags-wrap {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-
-.tasks__tags {
+.todo__tags {
   width: 90px;
-  background: linear-gradient(210deg, hsl(240, 75%, 65%) 0%, hsl(250, 55%, 65%) 100%);
+  background: linear-gradient(
+    210deg,
+    hsl(240, 75%, 65%) 0%,
+    hsl(250, 55%, 65%) 100%
+  );
   padding: 5px 7px;
   margin: 2px;
   border-radius: 999px;
@@ -114,5 +120,49 @@
   font-size: 12px;
   color: #fff;
   transition: 0.15s;
+}
+.todo__dates-wrap > :nth-child(n + 1) {
+  margin-top: 12px;
+}
+.todo__dates-wrap {
+  font-size: 13px;
+  color: #666666;
+}
+.todo__btn{
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7px 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  transition: .25s;
+}
+.todo__btn>i{
+  margin-left: 12px;
+  font-size: 20px;
+}
+.todo__btn.todo__btn-next{
+  border-color: #0d6efd;
+  color: hsl(226, 60%, 44%);
+  background-color: hsl(216, 70%, 93%);
+}
+.todo__btn.todo__btn-delete{
+  border-color: #dc3545;
+  color: hsl(354, 60%, 44%);
+  background-color: hsl(354, 70%, 93%);
+}
+.todo__btn.todo__btn-next:hover{
+  background-color: #0d6efd;
+  color: #fff;
+}
+.todo__btn.todo__btn-delete:hover{
+  background-color: #dc3545;
+  color: #fff;
 }
 /* ==================================== TASK END ====================================  */
