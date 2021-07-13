@@ -1,0 +1,58 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Title 1",
+      "body": "Todo body 1",
+      "status": 1,
+      "createdAt": 1624980327563,
+      "updatedAt": null,
+      "tags": []
+    },
+    {
+      "id": 2,
+      "title": "Title 2",
+      "body": "Todo body 2",
+      "status": 3,
+      "createdAt": 1624980327563,
+      "updatedAt": 1625573315814,
+      "tags": []
+    },
+    {
+      "id": 3,
+      "title": "Title 3",
+      "body": "Todo body 3",
+      "status": 3,
+      "createdAt": 1624980327563,
+      "updatedAt": 1624980327563,
+      "tags": []
+    },
+    {
+      "id": 4,
+      "title": "Title 4",
+      "body": "Todo body 4",
+      "status": 2,
+      "createdAt": 1624980327563,
+      "updatedAt": 1625573315814,
+      "tags": []
+    },
+    {
+      "id": 5,
+      "title": "Title 5",
+      "body": "Todo body 5",
+      "status": 2,
+      "createdAt": 1624980327563,
+      "updatedAt": 1625573315814,
+      "tags": []
+    },
+    {
+      "id": 6,
+      "title": "Title 6",
+      "body": "Todo body 6",
+      "status": 4,
+      "createdAt": 1624980327563,
+      "updatedAt": 1626184312159,
+      "tags": []
+    }
+  ]
+}

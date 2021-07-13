@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -7,19 +8,19 @@ export default function Header() {
         <div className="header__container">
           <nav className="navbar">
             <div className="logo__wrap">
-              <a href="/" className="logo">
+              <Link to="/" className="logo">
                 To-Do
-              </a>
+              </Link>
               <p className="logo__desc">• Web App by Ranee</p>
             </div>
-            <button className="btn__add-task" title="Add Task">
+            
+            <Link to="/add" className="btn__add-task" title="Add Task">
               <i className="fas fa-plus"></i>
-            </button>
+            </Link>
           </nav>
         </div>
       </div>
     </>
   );
 }
-{
-}
+

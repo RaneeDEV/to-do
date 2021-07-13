@@ -1,0 +1,19 @@
+.add-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 180px auto;
+  width: 45%;
+}
+.add-form > * {
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+.add-form > textarea {
+  height: 200px;
+  resize: none;
+}

@@ -3,7 +3,7 @@ import { getTodos } from "../api/crud";
 
 const initialState = []
 
-const Context = createContext()
+const Context = createContext([])
 export const useTodos = () => useContext(Context)
 const TodosProvider = ({ children }) => {
     const [data, dispatch] = useReducer(reducer, initialState)
@@ -20,8 +20,12 @@ const TodosProvider = ({ children }) => {
     }, [])
     function reducer(state, action) {
         switch (action.type) {
-            case 'INIT':
-                return [...action.payload]
+            case 'INIT': {
+                return action.payload
+            }
+            case 'ADD': {
+                return [...state, action.payload]
+            }
             case 'UPDATE': {
                 const todoIdx = state.findIndex(todo => todo.id === action.payload.id)
                 const newTodos = [...state]
@@ -30,6 +34,7 @@ const TodosProvider = ({ children }) => {
                 }
                 return newTodos
             }
+
             case 'DELETE': {
                 const todoIdx = state.findIndex(todo => todo.id === action.payload)
                 const newTodos = [...state]
@@ -45,3 +50,4 @@ const TodosProvider = ({ children }) => {
     return <Context.Provider value={[data, dispatch]}>{children}</Context.Provider>
 }
 export default TodosProvider
+

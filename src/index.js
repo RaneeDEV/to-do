@@ -4,13 +4,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TodosProvider from './hooks/useTodos';
 import { IntlProvider } from 'react-intl'
+import { BrowserRouter } from 'react-router-dom';
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <TodosProvider>
-      <IntlProvider locale='ru' defaultLocale='en'>
-        <App />
-      </IntlProvider>
-    </TodosProvider>
+    <BrowserRouter>
+      <TodosProvider>
+        <IntlProvider locale='ru' defaultLocale='en'>
+          <App />
+        </IntlProvider>
+      </TodosProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -28,6 +28,17 @@ export default function DashBoard() {
           </div>
         </div>
         <div className="dashboard__box">
+          <div className="dashboard__box-header checking">
+            <h2 className="dashboard__title"><i class="fas fa-spinner"></i>Сhecking</h2>
+            <button className="dashboard__settigs-btn">
+              <i className="fas fa-ellipsis-h"></i>
+            </button>
+          </div>
+          <div className="dashboard__todos">
+            <TodoList status={3}></TodoList>
+          </div>
+        </div>
+        <div className="dashboard__box">
           <div className="dashboard__box-header done">
             <h2 className="dashboard__title"><i className="fas fa-check"></i>Done</h2>
             <button className="dashboard__settigs-btn">
@@ -35,7 +46,7 @@ export default function DashBoard() {
             </button>
           </div>
           <div className="dashboard__todos">
-            <TodoList status={3}></TodoList>
+            <TodoList status={4}></TodoList>
           </div>
         </div>
       </div>

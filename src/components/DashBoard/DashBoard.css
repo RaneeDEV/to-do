@@ -3,10 +3,9 @@
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 .dashboard__box {
-  width: calc((100% / 3) - 2rem);
+  width: calc((100% / 4) - 1rem);
   background-color: #eeeeee;
   margin-right: 1rem;
   border-radius: 0 0 5px 5px;
@@ -22,9 +21,12 @@
   border-radius: 5px 5px 0 0;
 }
 .dashboard__box-header.todo {
-  background-color: hsl(30, 90%, 60%);
+  background-color: hsl(10, 85%, 60%);
 }
 .dashboard__box-header.inprocess {
+  background-color: hsl(30, 90%, 60%);
+}
+.dashboard__box-header.checking {
   background-color: hsl(45, 90%, 60%);
 }
 .dashboard__box-header.done {

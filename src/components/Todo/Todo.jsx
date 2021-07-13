@@ -30,6 +30,7 @@ export default function Todo({ todo }) {
     <div>
       <div className="todo__box">
         <h2 className="todo__title">{todo.title}</h2>
+        <h3>{todo.priority}</h3>
         <p className="todo__desc">{todo.body}</p>
         <div className="todo__tags-wrap">
           <p className="todo__tags">tag</p>
@@ -46,7 +47,7 @@ export default function Todo({ todo }) {
           </p>
         )}
         </div>
-        {todo.status < 3 ? (
+        {todo.status < 4 ? (
           <button onClick={changeTodoStatus} className="todo__btn todo__btn-next">Next stage <i className="far fa-hand-point-right"></i></button>
         ) : (
           <button onClick={removeTodo} className="todo__btn todo__btn-delete">Delete <i className="fas fa-times"></i></button>
